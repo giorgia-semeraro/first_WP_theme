@@ -1,0 +1,17 @@
+/**
+* Remove scrollbar
+*/
+%no-scrollbar {
+    -ms-overflow-style: none!important;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0px!important;
+        display: none!important;
+    }
+}
+
+
+
+

@@ -12,6 +12,7 @@
  */
 
 ?>
+        </main>
         <!-- #site-footer -->
         <footer id="site-footer" role="contentinfo">
         </footer>

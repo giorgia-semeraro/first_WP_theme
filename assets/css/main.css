@@ -9885,6 +9885,20 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/**
+* Remove scrollbar
+*/
+body {
+  -ms-overflow-style: none !important;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0px !important;
+  display: none !important;
+}
+
 /*******************************************
  *
  * Typography Classes
@@ -9902,6 +9916,22 @@ html {
 }
 .btn-in-opacity:hover {
   opacity: 1;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+@media (min-width: 576px) {
+  body.admin-bar .fixed-top {
+    top: 46px;
+  }
+}
+@media (min-width: 768px) {
+  body.admin-bar .fixed-top {
+    top: 32px;
+  }
 }
 
 .section {

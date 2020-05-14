@@ -73,3 +73,28 @@ if ( ! function_exists( 'samtheme_register_scripts' ) ) :
 endif;
 
 add_action( 'wp_enqueue_scripts', 'samtheme_register_scripts' );
+
+
+/**
+ * ACF documentation
+ */ 
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+
+/**
+ * Register menus locations
+ */
+function register_my_menus() {
+	register_nav_menus(
+		array(
+			'primary' => __( 'Primary Menu', 'samtheme' ),
+			'secondary' => __( 'Secondary Menu', 'samtheme' ),
+			'footer' => __( 'Footer Menu', 'samtheme' )
+		)
+	);
+}
+add_action( 'init', 'register_my_menus' );

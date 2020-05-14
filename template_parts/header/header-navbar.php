@@ -5,7 +5,9 @@
 ?>
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <div class="container">
-                    <a class="navbar-brand" href="#"><img src="assets/img/nike-logo.png" alt="nike logo"></a>
+
+                    <?php get_template_part( 'template_parts/navbar/navbar', 'logo'); ?>
+
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -16,6 +18,18 @@
                             <a class="nav-item nav-link" href="#">Pricing</a>
                             <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                         </div>
+
+                        <?php 
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'primary',
+                                    'container' => 'ul',
+                                    'menu_class' => 'navbar-nav ml-auto',
+                                    'link_before' => '<span class="nav-item nav-link">',
+                                    'link_after' => '</span>',
+                                )
+                            );
+                        ?>
                     </div>
                 </div>
             </nav>
