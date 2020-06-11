@@ -14,27 +14,19 @@
 ?>
 
 <?php get_header(); ?>
-<div class="row">
-    <div class="col">
-</div>
-<?php
 
-//wordpress loop
-if ( have_posts() ) : 
-    while ( have_posts() ) : the_post();
-    //Display post content
-    //print("<pre>".print_r($post,true)."</pre>");
+    <!-- page hero -->
+    <?php get_template_part('template_parts/section/section', 'page-hero'); ?>
 
-    ?>
+    <!-- section who we are -->
+    <?php get_template_part('template_parts/section/section', 'who-we-are'); ?>
 
-    <h1> <?php the_title(); ?> </h1>
-    <div> <?php the_content(); ?> </div>
+     <!-- section categories -->
+     <?php get_template_part('template_parts/section/section', 'categories'); ?>
 
-    <?php
-    endwhile;
-else :
-    _e( 'Sorry, no posts matched your criteria.', 'samtheme');
-endif;
-?>
+    <!-- section blog -->
+    <?php get_template_part('template_parts/section/section', 'blog'); ?>
+
+   
 
 <?php get_footer(); ?>

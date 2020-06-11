@@ -17,5 +17,15 @@
 
 <?php get_header(); ?>
 
+<?php 
+    $archive_title = __('Archive', 'theme');
+
+    if (is_category()) {
+        $archive_title = single_cat_title ('', false);
+    } elseif (is_post_type_archive ()) {
+        $archive_title = __('Blog', 'theme');
+    }
+    
+?>
 
 <?php get_footer(); ?>

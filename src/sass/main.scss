@@ -3,15 +3,13 @@
 // bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
-// utilities
-@import 'modules/_utilities';
-
 // typography
+@import 'modules/utilities';
 @import 'modules/typography';
+
+@import 'modules/lazy-load';
+@import 'modules/navbar';
+@import 'modules/footer';
 
 // base style
 @import 'base';
-
-
-
-
