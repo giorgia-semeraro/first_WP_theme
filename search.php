@@ -9,19 +9,19 @@
 
 get_header(); ?>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
+    <div class="container search-container">
+        <div class="row mb-5">
+            <div class="col" style="margin-top: 60px;">
 
             <?php get_search_form(); ?>
 
             <?php if ( have_posts() ) : ?>
 
-                <header class="page-header">
+                <header class="page-header mt-3">
                     <h1 class="page-title text-primary"><?php printf( __( 'Risultati di ricerca per: %s', 'theme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
                 </header><!-- .page-header -->
             
-            <div class="row">
+            <div class="row mt-5">
                 <?php /* Start the Loop */ ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div class="col-lg-4">

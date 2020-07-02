@@ -184,6 +184,7 @@ h2.coursive {
     list-style: none;
 }
 
+<<<<<<< HEAD
 
 #sidebar {
     list-style: none;
@@ -198,10 +199,21 @@ h2.screen-reader-text {
         p {
         color: $primary;
         }         
+=======
+form.searchform > div > input:nth-of-type(2){
+    background-color: $primary;
+    border: none;
+    border-radius: 2px;
+    transition: color .25s;
+    text-transform: uppercase;
+    &:hover{
+        color: white;
+>>>>>>> release/Final_Work
     }
 }
 
 article.teasepost {
+<<<<<<< HEAD
     a:nth-of-type(3) {
     text-transform: uppercase;
     color: black;
@@ -248,13 +260,47 @@ form.searchform {
 .pagination > div.nav-links {
     margin-bottom: 3rem;
     margin-top: 2rem;
+=======
+    a:nth-of-type(2) {
+        text-transform: uppercase;
+        font-size: .7rem;
+    }
+    a:nth-of-type(3) {
+        text-transform: uppercase;
+        color: black;
+        font-size: .8rem;
+    }   
+}  
+
+span.data-copy{
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+article.teasepage {
+    a:nth-of-type(2) {
+        text-transform: uppercase;
+        font-size: .8rem;
+    }
+}
+
+main.full {
+    height: 100vh;
+}
+
+div.search-container {
+    height: 100vh;
+>>>>>>> release/Final_Work
 }
 
 
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> release/Final_Work
