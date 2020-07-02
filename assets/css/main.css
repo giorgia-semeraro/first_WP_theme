@@ -10217,4 +10217,47 @@ h2.coursive {
   font-size: 3rem;
 }
 
+.widget_search {
+  list-style: none;
+}
+
+form.searchform > div > input:nth-of-type(2) {
+  background-color: #60BFBF;
+  border: none;
+  border-radius: 2px;
+  transition: color 0.25s;
+  text-transform: uppercase;
+}
+form.searchform > div > input:nth-of-type(2):hover {
+  color: white;
+}
+
+article.teasepost a:nth-of-type(2) {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+article.teasepost a:nth-of-type(3) {
+  text-transform: uppercase;
+  color: black;
+  font-size: 0.8rem;
+}
+
+span.data-copy {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+article.teasepage a:nth-of-type(2) {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+main.full {
+  height: 100vh;
+}
+
+div.search-container {
+  height: 100vh;
+}
+
 /*# sourceMappingURL=main.css.map */
