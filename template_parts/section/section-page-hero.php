@@ -18,7 +18,7 @@
                             <div class="text-center">
                             <h1>
                             <?php 
-                                if ( $page_hero['title'] ){ 
+                                if ( isset($page_hero['title'])) { 
                                     echo $page_hero['title']; 
                                 } else {
                                     the_title();

@@ -12,8 +12,8 @@ get_header(); ?>
 <main id="site-content" role="main">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <div class="section-inner thin error404-content">
+            <div class="col-lg-4">
+                <div class="section-inner thin error404-content mt3">
 
                     <h1 class="entry-title"><?php _e( 'Page Not Found', 'sam-theme' ); ?></h1>
 
