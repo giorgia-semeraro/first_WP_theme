@@ -75,6 +75,7 @@ class My_Recent_Posts extends WP_Widget {
 					'no_found_rows'       => true,
 					'post_status'         => 'publish',
 					'ignore_sticky_posts' => true,
+					'post__not_in' => array( get_the_ID() ),
 				),
 				$instance
 			)
@@ -90,31 +91,15 @@ class My_Recent_Posts extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 		?>
-		<ul>
-			<?php foreach ( $r->posts as $recent_post ) : ?>
-				<?php
-				$post_title   = get_the_title( $recent_post->ID );
-				$title        = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)' );
-				$aria_current = '';
+				<?php 
+					if ( $r->have_posts() ) :
+						while ( $r->have_posts() ) :
+							$r->the_post(); 
+							get_template_part('template_parts/teases/tease-post');
+						endwhile;
+					endif;
+					wp_reset_postdata();
 
-				get_template_part('template_parts/teases/tease-post');
-				
-				?>
-
-			<?php
-				if ( get_queried_object_id() === $recent_post->ID ) {
-					$aria_current = ' aria-current="page"';
-				}
-				?>
-				<li>
-					<a href="<?php the_permalink( $recent_post->ID ); ?> "<?php echo $aria_current; ?>><?php echo $title; ?></a>
-					<?php if ( $show_date ) : ?>
-						<span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
-					<?php endif; ?>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-		<?php
 		echo $args['after_widget'];
 	}
 
