@@ -66,7 +66,8 @@ if ( ! function_exists( 'samtheme_register_scripts' ) ) :
 		wp_enqueue_style( 'main', get_theme_file_uri( 'assets/css/main.css'), array(), $theme_version );
 		
 		//enqueue scripts
-		wp_enqueue_script( 'main', get_theme_file_uri( 'assets/js/main.js'), array(), $theme_version );
+		wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCLIT9gLHFO2KLv3xupBgOR5LtAD4wtg2Q', array(), $theme_version, true );
+		wp_enqueue_script( 'main', get_theme_file_uri( 'assets/js/main.js'), array('google-maps', 'jquery'), $theme_version, true );
 		wp_enqueue_script( 'bootstrap', get_theme_file_uri( 'node_modules/bootstrap/dist/js/bootstrap.min.js'), array('jquery'), $theme_version, true );
 
 	}
@@ -98,3 +99,47 @@ function register_my_menus() {
 	);
 }
 add_action( 'init', 'register_my_menus' );
+
+
+/*
+*
+* Google Maps API key - ACF
+*
+*/
+
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyCLIT9gLHFO2KLv3xupBgOR5LtAD4wtg2Q';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+/**
+ * Add a sidebar.
+ */
+function wpdocs_theme_slug_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Main Sidebar', 'textdomain' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );
+
+/**
+ * Add recent-posts
+ */
+
+require_once( get_template_directory() . '/classes/recent-posts.php' );
+
+/**
+ * Add a new widget "post_recenti"
+ */
+
+function register_custom_widgets() {
+	register_widget( 'My_Recent_Posts' );
+}
+add_action( 'widgets_init', 'register_custom_widgets' );

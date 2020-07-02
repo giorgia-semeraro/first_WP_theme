@@ -9,7 +9,7 @@
     
 ?>
 
-<section class="bg-light shadow pt-3">
+<section id="chi-siamo" class="bg-light shadow pt-3">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6"> 

@@ -17,9 +17,7 @@
      'post_per_page' => 4,
      'post_type' => 'post',
      'post_status' => 'publish',
-     'order'   => 'DESC',
-
-   
+     'order'   => 'DESC', 
  );
  
  // The Query
@@ -33,7 +31,7 @@
         <div class="row"> 
         
             <div class="col-12 mt-5 mb-5">
-                <h2>BLOG</h2>
+                <h2 class="text-primary">BLOG</h2>
             </div>
 
         <?php //the loop
@@ -43,9 +41,7 @@
                 $the_query->the_post();?>
                 
                 <div class="col-lg-3 col-md-6"> 
-                    <?php 
-                    get_template_part('template_parts/teases/tease-post')
-                    ?>
+                    <?php get_template_part('template_parts/teases/tease-post') ?>
                 </div>
         <?php
                 
@@ -62,12 +58,10 @@
         ?>
 
         </div>
-
         <div class="row"> 
             <div class="col-12 mt-5 mb-5">
-                <a href="#" class="btn btn-primary text-uppercase rounded-0 mt-5 mb-5">Continua</a>   
+                <h2 class="text-primary coursive">«Preparati per una vacanza da sogno».</h2>  
             </div>
         </div>
-
     </div>
 </section>
