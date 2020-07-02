@@ -77,7 +77,7 @@ add_action( 'wp_enqueue_scripts', 'samtheme_register_scripts' );
 
 
 /**
- * ACF documentation
+ * ACF OPTION page
  */ 
 
 if( function_exists('acf_add_options_page') ) {

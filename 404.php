@@ -9,15 +9,20 @@
 
 get_header(); ?>
 
-<main id="site-content" role="main">
+<main class="full" id="site-content">
     <div class="container">
         <div class="row">
-            <div class="col">
+<<<<<<< HEAD
+            <div class="col-lg-4">
+                <div class="section-inner thin error404-content mt3">
+=======
+            <div class="col-lg-6">
                 <div class="section-inner thin error404-content">
+>>>>>>> release/Final_Work
 
-                    <h1 class="entry-title"><?php _e( 'Page Not Found', 'sam-theme' ); ?></h1>
+                    <h1 class="entry-title text-primary mt-5"><?php _e( 'Ops! Pagina non trovata', 'sam-theme' ); ?></h1>
 
-                    <div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'sam-theme' ); ?></p></div>
+                    <div class="intro-text"><p><?php _e( 'Non è stato possibile trovare la pagina che stavi cercando. Potrebbe essere stata rimossa, oppure non è mai esistita.', 'sam-theme' ); ?></p></div>
 
                     <?php
                     get_search_form(

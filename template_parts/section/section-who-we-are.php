@@ -5,6 +5,7 @@
 <?php
     $who_we_are = get_field('who_we_are');
 
+
     if ($who_we_are ):
     
 ?>
@@ -22,7 +23,7 @@
                                     <p><?php echo $who_we_are['content']?></p>
                             <?php endif; ?>
                             <?php if (isset($who_we_are['call_to_action']) && $who_we_are['call_to_action']):?>
-                                    <a href="<?php echo $who_we_are['call_to_action']['url'] ?>" target="<?php echo $who_we_are['call_to_action']['target'] ?>" class="btn btn-primary btn-lg text-uppercase rounded-0"><?php echo $who_we_are['call_to_action']['title'] ?></a>
+                                    <a href="<?php echo $who_we_are['call_to_action']['url']?>" target="<?php echo $who_we_are['call_to_action']['target'] ?>" class="btn btn-primary btn-lg text-uppercase rounded-0"><?php echo $who_we_are['call_to_action']['title'] ?></a>
                             <?php endif; ?>
                         </div>
                     </div>
