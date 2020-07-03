@@ -12,13 +12,8 @@ get_header(); ?>
 <main class="full" id="site-content">
     <div class="container">
         <div class="row">
-<<<<<<< HEAD
-            <div class="col-lg-4">
-                <div class="section-inner thin error404-content mt3">
-=======
             <div class="col-lg-6">
-                <div class="section-inner thin error404-content">
->>>>>>> release/Final_Work
+                <div class="section-inner thin error404-content mt3">
 
                     <h1 class="entry-title text-primary mt-5"><?php _e( 'Ops! Pagina non trovata', 'sam-theme' ); ?></h1>
 
