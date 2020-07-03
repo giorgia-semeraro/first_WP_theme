@@ -17,8 +17,7 @@
                 <h1 class="text-primary mt-5">
                     <?php the_title(); ?>
                 </h1>
-                <div>
-
+                <div class="col-lg-8">
                     
                     <p>
                         <?php the_content(); ?>

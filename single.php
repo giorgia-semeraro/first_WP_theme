@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 
 <main>
-    <div class="container" style="margin-top: 100px">
+    <div class="container mb-5" style="margin-top: 100px;">
         <div class="row">
             <div class="col-lg-8">
                 <?php 
@@ -39,7 +39,7 @@
                     endif;
                 ?>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 mt-3">
                 <?php get_template_part ( 'template_parts/main-sidebar' ); ?>
             </div>
         </div>

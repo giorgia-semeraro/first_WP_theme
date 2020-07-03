@@ -7,9 +7,9 @@
 <?php get_header();?>
 
 <section>
-    <div class="container mt-3">
+    <div class="container mt-4">
         <div class="row"> 
-                <h1>
+                <h1 class="text-primary" style="margin-top: 130px!important;">
                     <?php echo __('Blog', 'theme'); ?>
                 </h1>
             <div class="col-12 mt-3 mb-5">

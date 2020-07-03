@@ -10221,4 +10221,75 @@ h2.coursive {
   list-style: none;
 }
 
+#sidebar {
+  list-style: none;
+}
+
+h2.screen-reader-text {
+  display: none;
+}
+
+form.searchform > div > input:nth-of-type(2) {
+  background-color: #60BFBF;
+  border: none;
+  border-radius: 2px;
+  transition: color 0.25s;
+  text-transform: uppercase;
+}
+form.searchform > div > input:nth-of-type(2):hover {
+  color: white;
+}
+
+article.teasepost a:nth-of-type(3) {
+  text-transform: uppercase;
+  color: black;
+  font-size: 0.8rem;
+}
+article.teasepost a:nth-of-type(2) {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+article.teasepost span {
+  font-size: 0.7rem;
+}
+article.teasepost .wp-post-image {
+  max-width: 100%;
+}
+
+h2.widgettitle {
+  color: #60BFBF;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+form.searchform input:nth-of-type(2) {
+  height: 34px;
+  background-color: #60BFBF;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  transition: color 0.25s;
+}
+form.searchform input:nth-of-type(2):hover {
+  color: white;
+}
+
+.categoria, .data-copy {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.pagination > div.nav-links {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+main.full {
+  height: 100vh;
+}
+
+div.search-container {
+  height: 100vh;
+}
+
 /*# sourceMappingURL=main.css.map */
